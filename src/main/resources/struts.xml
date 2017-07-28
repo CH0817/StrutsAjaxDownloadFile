@@ -1,0 +1,19 @@
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+        "http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+    <!-- i18n編碼 -->
+    <constant name="struts.i18n.encodin" value="UTF-8"/>
+    <!-- 上傳限制(10MB) -->
+    <constant name="struts.multipart.maxSize" value="10485760"/>
+    <package name="main" extends="struts-default" namespace="/">
+        <action name="fileDownload" class="tw.com.rex.DownloadAction" method="fileDownload">
+            <result name="fileDownload" type="stream">
+                <param name="inputName">fileInputStream</param>
+                <param name="contentDisposition">attachment;filename*="${fileName}"</param>
+                <param name="contentType">application/octet-stream;charset=UTF-8</param>
+                <param name="bufferSize">1024</param>
+            </result>
+        </action>
+    </package>
+</struts>
