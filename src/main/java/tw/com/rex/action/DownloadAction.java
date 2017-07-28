@@ -1,6 +1,4 @@
-package tw.com.rex;
-
-import tw.com.rex.base.BaseAction;
+package tw.com.rex.action;
 
 import java.io.InputStream;
 import java.io.UnsupportedEncodingException;
@@ -13,7 +11,7 @@ import java.nio.file.StandardOpenOption;
 /**
  * @author Rex on 2017/07/25.
  */
-public class DownloadAction extends BaseAction {
+public class DownloadAction {
 
     private String fileName;
     private InputStream fileInputStream;

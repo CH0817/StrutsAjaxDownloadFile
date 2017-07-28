@@ -7,7 +7,7 @@
     <!-- 上傳限制(10MB) -->
     <constant name="struts.multipart.maxSize" value="10485760"/>
     <package name="main" extends="struts-default" namespace="/">
-        <action name="fileDownload" class="tw.com.rex.DownloadAction" method="fileDownload">
+        <action name="fileDownload" class="tw.com.rex.action.DownloadAction" method="fileDownload">
             <result name="fileDownload" type="stream">
                 <param name="inputName">fileInputStream</param>
                 <param name="contentDisposition">attachment;filename*="${fileName}"</param>
